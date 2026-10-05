@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MAURICE Proactive Code Review Daemon (scripts/08_code_review.py)
+maurice Proactive Code Review Daemon (scripts/08_code_review.py)
 
 Proactively listens to PR events / diffs (via MCP or daemon loop),
 analyzes code diffs using mau-llm-1.0-c model, identifies anti-patterns,
@@ -355,7 +355,7 @@ def handle_mcp_rpc_request(request_json: dict[str, Any], server_url: str) -> dic
 
 def run_mcp_daemon(server_url: str = "http://localhost:8000") -> None:
     """Runs MCP daemon reading JSON-RPC requests line by line from stdin."""
-    logger.info("Starting MAURICE MCP Proactive Code Review Daemon...")
+    logger.info("Starting maurice MCP Proactive Code Review Daemon...")
     for line in sys.stdin:
         line = line.strip()
         if not line:
@@ -370,7 +370,7 @@ def run_mcp_daemon(server_url: str = "http://localhost:8000") -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="MAURICE Proactive Code Review Daemon using mau-llm-1.0-c")
+    parser = argparse.ArgumentParser(description="maurice Proactive Code Review Daemon using mau-llm-1.0-c")
     parser.add_argument("--daemon", action="store_true", help="Run in MCP daemon mode listening on stdin")
     parser.add_argument("--pr-event", type=str, help="Path to JSON file containing PR event data")
     parser.add_argument("--diff-file", type=str, help="Path to text file containing git diff")

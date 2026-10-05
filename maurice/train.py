@@ -1,5 +1,5 @@
 """
-MAURICE QLoRA Parameterized Trainer (maurice/train.py)
+maurice QLoRA Parameterized Trainer (maurice/train.py)
 
 Trains QLoRA adapter for target variant (c, r, or g) based on specified config.
 Hyperparameters:
@@ -179,7 +179,7 @@ def run_training(
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE Parameterized QLoRA Trainer")
+    parser = argparse.ArgumentParser(description="maurice Parameterized QLoRA Trainer")
     parser.add_argument(
         "--variant",
         choices=["c", "r", "g"],

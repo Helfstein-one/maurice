@@ -1,6 +1,6 @@
 FROM ../build/mau-llm-1.0-r-q4_k_m.gguf
 
-# MAURICE Reasoning Model
+# maurice Reasoning Model
 
 TEMPLATE """{{ if .System }}<|im_start|>system
 {{ .System }}<|im_end|>
@@ -8,7 +8,7 @@ TEMPLATE """{{ if .System }}<|im_start|>system
 {{ .Prompt }}<|im_end|>
 {{ end }}<|im_start|>assistant
 """
-SYSTEM """You are MAURICE-r (Reasoning variant). You are an advanced analytical assistant. You MUST ALWAYS use <think>...</think> tags to plan and reason step-by-step before providing your final answer."""
+SYSTEM """You are maurice-r (Reasoning variant). You are an advanced analytical assistant. You MUST ALWAYS use <think>...</think> tags to plan and reason step-by-step before providing your final answer."""
 
 PARAMETER stop "<|im_end|>"
 PARAMETER stop "<|im_start|>"

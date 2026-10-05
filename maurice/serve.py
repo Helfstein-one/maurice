@@ -1,5 +1,5 @@
 """
-MAURICE Inference Server (maurice/serve.py)
+maurice Inference Server (maurice/serve.py)
 Implements an OpenAI-compatible /v1/chat/completions endpoint using FastAPI.
 Supports Hugging Face Transformers, vLLM (AsyncLLMEngine), and Mock backends.
 """
@@ -47,14 +47,14 @@ class ServerState:
 
 
 server_state = ServerState()
-app = FastAPI(title="MAURICE Inference Server")
+app = FastAPI(title="maurice Inference Server")
 
 
 def format_chatml_prompt(messages: list[ChatMessage], variant: str = "c") -> str:
     system_prompts = {
-        "c": "You are MAURICE Code Agent (mau-llm-1.0-c), an expert AI coding and refactoring assistant.",
-        "r": "You are MAURICE Reasoning Agent (mau-llm-1.0-r). Preserve and calibrate step-by-step chain-of-thought tokens inside <think>...</think> tags.",
-        "g": "You are MAURICE General Agent (mau-llm-1.0-g), a helpful AI assistant.",
+        "c": "You are maurice Code Agent (mau-llm-1.0-c), an expert AI coding and refactoring assistant.",
+        "r": "You are maurice Reasoning Agent (mau-llm-1.0-r). Preserve and calibrate step-by-step chain-of-thought tokens inside <think>...</think> tags.",
+        "g": "You are maurice General Agent (mau-llm-1.0-g), a helpful AI assistant.",
     }
 
     has_system = any(msg.role == "system" for msg in messages)
@@ -355,7 +355,7 @@ async def chat_completions(
 
 
 def parse_args(args_list: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="MAURICE Inference Server")
+    parser = argparse.ArgumentParser(description="maurice Inference Server")
     parser.add_argument("--variant", choices=["c", "r", "g"], default="c", help="Model variant")
     parser.add_argument("--host", type=str, default="0.0.0.0", help="Host IP")
     parser.add_argument("--port", type=int, default=8000, help="Port number")

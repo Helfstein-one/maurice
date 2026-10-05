@@ -1,5 +1,5 @@
 """
-MAURICE Hardware Benchmark & Evaluation Harness (maurice/eval.py)
+maurice Hardware Benchmark & Evaluation Harness (maurice/eval.py)
 
 Automates tracking of metrics:
 - Token Throughput (tokens/sec) via llama-bench or PyTorch timing on AVX-512/AVX2/Metal MPS.
@@ -205,7 +205,7 @@ def analyze_benchmark_results(results: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE Hardware Benchmark & Evaluation Harness")
+    parser = argparse.ArgumentParser(description="maurice Hardware Benchmark & Evaluation Harness")
     parser.add_argument(
         "--variant",
         choices=["c", "r", "g", "all"],
@@ -256,7 +256,7 @@ def main(args_list: list[str] | None = None):
     if args.analyze or args.input_json:
         analysis = analyze_benchmark_results(all_results)
         print("\n==================================================")
-        print("MAURICE BENCHMARK ANALYSIS REPORT")
+        print("maurice BENCHMARK ANALYSIS REPORT")
         print("==================================================")
         print(json.dumps(analysis, indent=2))
 

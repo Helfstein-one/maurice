@@ -1,4 +1,4 @@
-# MAURICE Model File: mau-llm-1.0-g (General Purpose & Adaptive Reasoner)
+# maurice Model File: mau-llm-1.0-g (General Purpose & Adaptive Reasoner)
 # Optimized for zero-runtime C/C++ execution via llama.cpp and Ollama local deployment
 
 FROM ../build/mau-llm-1.0-g-q4_k_m.gguf
@@ -16,7 +16,7 @@ PARAMETER stop "<|endoftext|>"
 PARAMETER stop "</think>"
 
 # System Prompt Definition
-SYSTEM """You are mau-llm-1.0-g, a general-purpose and adaptive reasoner in the MAURICE model suite. Balance instruction-following with calibrated thinking suppression for trivial conversational inputs."""
+SYSTEM """You are mau-llm-1.0-g, a general-purpose and adaptive reasoner in the maurice model suite. Balance instruction-following with calibrated thinking suppression for trivial conversational inputs."""
 
 # Default ChatML Template Definition
 TEMPLATE """<|im_start|>system

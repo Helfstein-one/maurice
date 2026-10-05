@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MAURICE Reasoning Validation Engine (scripts/validate_reasoning.py)
+maurice Reasoning Validation Engine (scripts/validate_reasoning.py)
 
 Validates the mathematical and deductive reasoning capabilities of mau-llm-1.0-r.
 Injects prompts into the model, verifies the generation and structural integrity of
@@ -68,7 +68,7 @@ REASONING_PROMPTS = [
 def load_modelfile_system_prompt(modelfile_path: str = "modelfiles/Modelfile.r") -> str:
     """Parses system prompt from a Modelfile."""
     default_system_prompt = (
-        "You are mau-llm-1.0-r, a pure reasoning engine in the MAURICE model suite. "
+        "You are mau-llm-1.0-r, a pure reasoning engine in the maurice model suite. "
         "Preserve and calibrate step-by-step chain-of-thought tokens by placing your "
         "reasoning strictly inside <think>...</think> tags prior to presenting final solutions."
     )
@@ -202,7 +202,7 @@ def run_reasoning_validation(
     system_prompt = load_modelfile_system_prompt(modelfile_path)
 
     print("==================================================")
-    print("MAURICE Reasoning Validation Engine (mau-llm-1.0-r)")
+    print("maurice Reasoning Validation Engine (mau-llm-1.0-r)")
     print(f"Modelfile Target: {modelfile_path}")
     print(f"Model Path: {model_path}")
     print(f"Passing Threshold: {threshold * 100:.1f}%")
@@ -266,7 +266,7 @@ def run_reasoning_validation(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="MAURICE Reasoning Validation Engine")
+    parser = argparse.ArgumentParser(description="maurice Reasoning Validation Engine")
     parser.add_argument(
         "--model-path",
         type=str,

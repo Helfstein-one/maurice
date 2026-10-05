@@ -27,7 +27,7 @@ RUN cmake --build build --config Release -j$(nproc) --target llama-cli llama-qua
 FROM docker.io/library/python:3.11-slim-bookworm
 
 LABEL maintainer="Maurício Helfstein Gonçalves"
-LABEL project="MAURICE"
+LABEL project="maurice"
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \

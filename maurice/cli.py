@@ -1,5 +1,5 @@
 """
-MAURICE CLI Entrypoint (maurice/cli.py)
+maurice CLI Entrypoint (maurice/cli.py)
 
 Unifies the pipeline into a single `maurice` command with subcommands.
 """

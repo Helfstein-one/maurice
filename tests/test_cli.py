@@ -35,7 +35,7 @@ def test_cli_no_args(capsys):
 def test_cli_info(capsys):
     cli.main(["info"])
     captured = capsys.readouterr()
-    assert f"MAURICE Package Version: {__version__}" in captured.out
+    assert f"maurice Package Version: {__version__}" in captured.out
     assert "Available Model Variants:" in captured.out
 
 

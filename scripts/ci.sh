@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ci.sh - Deterministic CI script for MAURICE
+# ci.sh - Deterministic CI script for maurice
 # Triggered by jules-mcp-server webhook endpoint
 
 set -e

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# MAURICE GGUF Conversion & imatrix Quantization Pipeline (scripts/04_quantize_imatrix.sh)
+# maurice GGUF Conversion & imatrix Quantization Pipeline (scripts/04_quantize_imatrix.sh)
 #
 # Steps:
 # 1. Export/Convert Hugging Face merged model to GGUF F16 (convert_hf_to_gguf.py or llama-quantize/convert).
@@ -20,7 +20,7 @@ MODEL_Q4="${BUILD_DIR}/mau-llm-1.0-${VARIANT}-q4_k_m.gguf"
 mkdir -p "${BUILD_DIR}"
 
 echo "=================================================="
-echo "MAURICE Quantization Pipeline for Variant: ${VARIANT}"
+echo "maurice Quantization Pipeline for Variant: ${VARIANT}"
 echo "=================================================="
 
 # Step 1: Generate calibration dataset (imatrix.txt)
@@ -40,7 +40,7 @@ def refactor_ast(node):
 --- a/src/main.c
 +++ b/src/main.c
 @@ -10,6 +10,8 @@ int main(int argc, char** argv) {
-     printf("Initializing MAURICE pipeline...\n");
+     printf("Initializing maurice pipeline...\n");
 +    init_cuda_context();
 +    return 0;
  }
@@ -73,7 +73,7 @@ EOF
         ;;
     *)
         cat << 'EOF' > "${IMATRIX_TXT}"
-Sample calibration data for MAURICE pipeline imatrix quantization.
+Sample calibration data for maurice pipeline imatrix quantization.
 EOF
         ;;
 esac

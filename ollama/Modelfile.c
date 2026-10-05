@@ -1,6 +1,6 @@
 FROM ../build/mau-llm-1.0-c-q4_k_m.gguf
 
-# MAURICE Code Model
+# maurice Code Model
 # Based on DeepSeek-R1-Distill-Qwen-1.5B (simulated)
 
 TEMPLATE """{{ if .System }}<|im_start|>system
@@ -9,7 +9,7 @@ TEMPLATE """{{ if .System }}<|im_start|>system
 {{ .Prompt }}<|im_end|>
 {{ end }}<|im_start|>assistant
 """
-SYSTEM """You are MAURICE-c (Coding variant). You are an ultra-fast programming assistant. You generate clean, optimal, and thoroughly documented code."""
+SYSTEM """You are maurice-c (Coding variant). You are an ultra-fast programming assistant. You generate clean, optimal, and thoroughly documented code."""
 
 PARAMETER stop "<|im_end|>"
 PARAMETER stop "<|im_start|>"

@@ -1,6 +1,6 @@
 .PHONY: all prepare train merge quantize eval serve code-review ui clean help test dry-run lint quality-gates mcp-server validate-reasoning
 
-MAURICE ?= maurice
+maurice ?= maurice
 PYTHON ?= python3
 PORT ?= 8000
 VARIANT ?= c
@@ -8,52 +8,52 @@ VARIANT ?= c
 all: prepare train merge quantize eval
 
 prepare:
-	$(MAURICE) prepare --variant $(VARIANT)
+	$(maurice) prepare --variant $(VARIANT)
 
 train:
 	@if [ "$(VARIANT)" = "all" ]; then \
-		$(MAURICE) train --variant c; \
-		$(MAURICE) train --variant r; \
-		$(MAURICE) train --variant g; \
+		$(maurice) train --variant c; \
+		$(maurice) train --variant r; \
+		$(maurice) train --variant g; \
 	else \
-		$(MAURICE) train --variant $(VARIANT); \
+		$(maurice) train --variant $(VARIANT); \
 	fi
 
 merge:
 	@if [ "$(VARIANT)" = "all" ]; then \
-		$(MAURICE) merge --variant c; \
-		$(MAURICE) merge --variant r; \
-		$(MAURICE) merge --variant g; \
+		$(maurice) merge --variant c; \
+		$(maurice) merge --variant r; \
+		$(maurice) merge --variant g; \
 	else \
-		$(MAURICE) merge --variant $(VARIANT); \
+		$(maurice) merge --variant $(VARIANT); \
 	fi
 
 quantize:
 	@if [ "$(VARIANT)" = "all" ]; then \
-		$(MAURICE) quantize --variant c; \
-		$(MAURICE) quantize --variant r; \
-		$(MAURICE) quantize --variant g; \
+		$(maurice) quantize --variant c; \
+		$(maurice) quantize --variant r; \
+		$(maurice) quantize --variant g; \
 	else \
-		$(MAURICE) quantize --variant $(VARIANT); \
+		$(maurice) quantize --variant $(VARIANT); \
 	fi
 
 eval:
-	$(MAURICE) eval --variant $(VARIANT)
+	$(maurice) eval --variant $(VARIANT)
 
 validate-reasoning:
 	$(PYTHON) scripts/validate_reasoning.py --dry-run
 
 serve:
-	$(MAURICE) serve --variant $(VARIANT) --port $(PORT)
+	$(maurice) serve --variant $(VARIANT) --port $(PORT)
 
 code-review:
 	$(PYTHON) scripts/08_code_review.py
 
 dry-run:
-	$(MAURICE) prepare --variant all --dry-run
-	$(MAURICE) train --variant c --dry-run
-	$(MAURICE) merge --variant c --dry-run
-	$(MAURICE) eval --variant all --dry-run
+	$(maurice) prepare --variant all --dry-run
+	$(maurice) train --variant c --dry-run
+	$(maurice) merge --variant c --dry-run
+	$(maurice) eval --variant all --dry-run
 	$(PYTHON) scripts/validate_reasoning.py --dry-run
 	$(PYTHON) -m py_compile scripts/06_serve_model.py
 	$(PYTHON) -m py_compile scripts/07_publish_hub.py
@@ -74,7 +74,7 @@ lint:
 	ruff format --check .
 
 ui:
-	$(MAURICE) ui
+	$(maurice) ui
 
 clean:
 	rm -rf checkpoints/ build/ results/
@@ -82,7 +82,7 @@ clean:
 	find . -name '*.pyc' -delete
 
 help:
-	@echo 'MAURICE Pipeline Makefile'
+	@echo 'maurice Pipeline Makefile'
 	@echo ''
 	@echo 'Targets:'
 	@echo '  all        Run full pipeline (prepare → train → merge → quantize → eval)'

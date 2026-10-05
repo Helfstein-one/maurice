@@ -1,5 +1,5 @@
 """
-MAURICE RLAIF Preference Synthesizer (maurice/synth.py)
+maurice RLAIF Preference Synthesizer (maurice/synth.py)
 
 Reads existing SFT datasets, generates responses using a strong base model (vLLM or HF),
 scores them via LLM-as-a-Judge, and outputs a chosen/rejected preference dataset for DPO/ORPO.
@@ -111,7 +111,7 @@ def run_synthesis(variant: str, input_file: str | None = None, output_file: str 
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE RLAIF Synthesizer")
+    parser = argparse.ArgumentParser(description="maurice RLAIF Synthesizer")
     parser.add_argument("--variant", choices=["c", "r", "g"], required=True, help="Model variant")
     parser.add_argument("--input", type=str, help="Input SFT dataset (JSONL)")
     parser.add_argument("--output", type=str, help="Output preference dataset (JSONL)")

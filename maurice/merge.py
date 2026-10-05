@@ -1,5 +1,5 @@
 """
-MAURICE Weight Consolidation (maurice/merge.py)
+maurice Weight Consolidation (maurice/merge.py)
 
 Consolidates QLoRA adapter weights into the base HuggingFace model and saves full 16-bit FP16/BF16 model checkpoint.
 Export call using save_method="merged_16bit" (or unsloth/PEFT merge_and_unload()).
@@ -97,7 +97,7 @@ def merge_weights(
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE Weight Merger")
+    parser = argparse.ArgumentParser(description="maurice Weight Merger")
     parser.add_argument("--variant", choices=["c", "r", "g"], required=True, help="Model variant")
     parser.add_argument(
         "--adapter-path",

@@ -1,5 +1,5 @@
 """
-MAURICE Post-SFT Alignment Trainer (maurice/align.py)
+maurice Post-SFT Alignment Trainer (maurice/align.py)
 
 Aligns the fine-tuned models using DPO (Direct Preference Optimization) or ORPO.
 Reads from data/processed/prefs_{variant}.jsonl
@@ -59,7 +59,7 @@ def run_alignment(
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE Post-SFT Alignment")
+    parser = argparse.ArgumentParser(description="maurice Post-SFT Alignment")
     parser.add_argument("--variant", choices=["c", "r", "g"], required=True, help="Model variant")
     parser.add_argument("--method", choices=["dpo", "orpo"], default="orpo", help="Alignment method")
     parser.add_argument("--dataset", type=str, help="Input preference dataset (JSONL)")

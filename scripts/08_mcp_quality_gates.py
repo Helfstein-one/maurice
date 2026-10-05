@@ -260,7 +260,7 @@ class MCPRequest(BaseModel):
     id: str | int | None = 1
 
 
-app = FastAPI(title="MAURICE Quality & Validation Gates MCP Server")
+app = FastAPI(title="maurice Quality & Validation Gates MCP Server")
 
 
 @app.get("/health")
@@ -424,7 +424,7 @@ async def handle_mcp_jsonrpc(request: MCPRequest):
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="MAURICE MCP Quality & Validation Gate Server")
+    parser = argparse.ArgumentParser(description="maurice MCP Quality & Validation Gate Server")
     parser.add_argument("--host", type=str, default="0.0.0.0", help="Host address (default: 0.0.0.0)")
     parser.add_argument("--port", type=int, default=8080, help="Port (default: 8080)")
     parser.add_argument("--run-gates", action="store_true", help="Run quality gates directly from CLI")

@@ -1,5 +1,5 @@
 """
-MAURICE Dataset Preparation Pipeline (maurice/prepare.py)
+maurice Dataset Preparation Pipeline (maurice/prepare.py)
 
 Filters and formats datasets into ChatML JSONL format with calibrated <think> tags.
 - Variant 'c' (Code & Refactor): Validates syntax (Python AST, C/Rust/Go patterns) and structures unified diff patches.
@@ -325,7 +325,7 @@ def process_variant(variant: str, output_path: str, sample_size: int = 50, synth
 
 
 def main(args_list: list[str] | None = None):
-    parser = argparse.ArgumentParser(description="MAURICE Dataset Preparation Pipeline")
+    parser = argparse.ArgumentParser(description="maurice Dataset Preparation Pipeline")
     parser.add_argument(
         "--variant",
         choices=["c", "r", "g", "all"],

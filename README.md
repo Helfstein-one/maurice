@@ -1,17 +1,17 @@
-# 🧠 MAURICE
+# 🧠 maurice
 **Minimal Adaptation for Ultra-fast Reasoning and Inference in Code Engines**
 
-[![CI Pipeline](https://github.com/Helfstein-one/MAURICE/actions/workflows/ci.yml/badge.svg)](https://github.com/Helfstein-one/MAURICE/actions/workflows/ci.yml)
+[![CI Pipeline](https://github.com/Helfstein-one/maurice/actions/workflows/ci.yml/badge.svg)](https://github.com/Helfstein-one/maurice/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-MAURICE is an end-to-end local LLM engineering framework designed to distill, fine-tune, and align small, highly-capable SLMs (Small Language Models). By leveraging QLoRA, RLAIF (LLM-as-a-judge preference synthesis), ORPO/DPO alignment, and GGUF quantization, MAURICE allows anyone to build specialized AI coding engines that run locally with minimal hardware footprint.
+maurice is an end-to-end local LLM engineering framework designed to distill, fine-tune, and align small, highly-capable SLMs (Small Language Models). By leveraging QLoRA, RLAIF (LLM-as-a-judge preference synthesis), ORPO/DPO alignment, and GGUF quantization, maurice allows anyone to build specialized AI coding engines that run locally with minimal hardware footprint.
 
 ---
 
-## 🎯 Por Que Criar o MAURICE? (Vantagens & Trade-offs)
+## 🎯 Por Que Criar o maurice? (Vantagens & Trade-offs)
 
-Na era de modelos monolíticos gigantes (70B+ parâmetros) hospedados em nuvem, o MAURICE adota a filosofia do **"Small, Specialized, and Local"**. 
+Na era de modelos monolíticos gigantes (70B+ parâmetros) hospedados em nuvem, o maurice adota a filosofia do **"Small, Specialized, and Local"**. 
 
 ### Vantagens (Por que usar?)
 1. **Inferência Ultra-Rápida:** Modelos de 1.5B parâmetros quantizados em Q4_K_M entregam mais de 120+ tokens/segundo em Apple Silicon e CPUs modernas, e 200+ t/s em GPUs dedicadas.
@@ -38,7 +38,7 @@ A nossa pipeline é segmentada em 6 estágios modulares. Da extração do dado b
 
 ## ⚡ Performance e Benchmarks
 
-MAURICE é construído para velocidade. Aqui está o perfil de inferência esperado para a família `mau-llm-1.0` (1.5B parâmetros, Q4_K_M):
+maurice é construído para velocidade. Aqui está o perfil de inferência esperado para a família `mau-llm-1.0` (1.5B parâmetros, Q4_K_M):
 
 ![Dashboard de Benchmarks no Streamlit](images/streamlit_benchmark.jpg)
 
@@ -58,7 +58,7 @@ MAURICE é construído para velocidade. Aqui está o perfil de inferência esper
 
 ## 🛠️ Walkthrough Prático (Como usar o CLI)
 
-A CLI do MAURICE (`maurice.cli`) simplifica o orquestramento. Abaixo está o fluxo completo para gerar a variante de código (`c`).
+A CLI do maurice (`maurice.cli`) simplifica o orquestramento. Abaixo está o fluxo completo para gerar a variante de código (`c`).
 
 **1. Preparar o dataset (SFT)**
 ```bash
@@ -119,7 +119,7 @@ A arquitetura do `Modelfile` já embute o *System Prompt* rigoroso, os parâmetr
 
 ## 🖥️ Streamlit Interactive UI
 
-O MAURICE inclui uma interface gráfica (Web UI) construída em **Streamlit** para visualização e interação direta com os modelos.
+O maurice inclui uma interface gráfica (Web UI) construída em **Streamlit** para visualização e interação direta com os modelos.
 
 ![Streamlit Chat Interface](images/streamlit_chat.jpg)
 
@@ -177,7 +177,7 @@ O repositório garante zero falhas arquiteturais usando um pipeline DAG de 6 cam
 ## 📚 Estrutura do Diretório
 
 ```text
-MAURICE/
+maurice/
 ├── assets/                    # Diagramas profissionais SVG (Arquitetura & Benchmarks)
 ├── checkpoints/               # Artefatos intermediários (LoRA e Modelos mesclados FP16)
 ├── data/                      # Datasets Brutos (raw) e Processados (SFT / RLAIF)
@@ -197,14 +197,14 @@ MAURICE/
 
 Este projeto é open-source sob a [MIT License](LICENSE).
 
-Se o MAURICE foi útil nas suas pesquisas ou engenharia de IA local, considere citar:
+Se o maurice foi útil nas suas pesquisas ou engenharia de IA local, considere citar:
 
 ```bibtex
 @software{goncalves2026maurice,
   author = {Gon{\c{c}}alves, Maur{'i}cio Helfstein},
-  title = {MAURICE: Minimal Adaptation for Ultra-fast Reasoning and Inference in Code Engines},
+  title = {maurice: Minimal Adaptation for Ultra-fast Reasoning and Inference in Code Engines},
   year = {2026},
   publisher = {GitHub},
-  url = {https://github.com/Helfstein-one/MAURICE}
+  url = {https://github.com/Helfstein-one/maurice}
 }
 ```

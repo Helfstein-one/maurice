@@ -40,11 +40,11 @@ def configure_mock_server():
 
 def test_format_chatml_prompt():
     messages = [
-        serve_model.ChatMessage(role="user", content="Hello, MAURICE!"),
+        serve_model.ChatMessage(role="user", content="Hello, maurice!"),
     ]
     prompt = serve_model.format_chatml_prompt(messages, "c")
     assert "<|im_start|>system" in prompt
-    assert "<|im_start|>user\nHello, MAURICE!<|im_end|>" in prompt
+    assert "<|im_start|>user\nHello, maurice!<|im_end|>" in prompt
     assert prompt.endswith("<|im_start|>assistant\n")
 
 

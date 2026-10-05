@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MAURICE Automated Hugging Face Hub Publishing Pipeline (scripts/07_publish_hub.py)
+maurice Automated Hugging Face Hub Publishing Pipeline (scripts/07_publish_hub.py)
 
 Packages and publishes merged 16-bit FP16 models and quantized GGUF binaries to Hugging Face Hub,
 dynamically generating standardized Model Cards (README.md) with benchmark performance metrics.
@@ -54,7 +54,7 @@ def parse_benchmark_results(benchmark_file: str, variant: str) -> dict[str, Any]
 
 def generate_model_card(variant: str, benchmark_file: str = "build/benchmark_results.json") -> str:
     """Generates a rich README.md Model Card with YAML metadata and benchmark metrics."""
-    desc = VARIANT_DESCRIPTIONS.get(variant, "Specialized MAURICE language model variant.")
+    desc = VARIANT_DESCRIPTIONS.get(variant, "Specialized maurice language model variant.")
     variant_title = VARIANT_NAMES.get(variant, f"mau-llm-1.0-{variant}")
 
     # Parse dynamic metrics if available
@@ -88,9 +88,9 @@ tags:
 - llama.cpp
 ---
 
-# MAURICE 1.5B - {variant_title}
+# maurice 1.5B - {variant_title}
 
-**MAURICE** (*Minimal Adaptation for Ultra-fast Reasoning and Inference in Code Engines*) is an end-to-end 1.5B parameter language model series fine-tuned from `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`.
+**maurice** (*Minimal Adaptation for Ultra-fast Reasoning and Inference in Code Engines*) is an end-to-end 1.5B parameter language model series fine-tuned from `deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B`.
 
 ## Variant Details
 
@@ -104,7 +104,7 @@ This model uses the standard **ChatML** prompt structure with support for reason
 
 ```
 <|im_start|>system
-You are MAURICE, an expert AI assistant.
+You are maurice, an expert AI assistant.
 <|im_end|>
 <|im_start|>user
 {{prompt}}
@@ -157,7 +157,7 @@ def publish_variant(
     gguf_path = os.path.join(gguf_dir, f"mau-llm-1.0-{variant}-q4_k_m.gguf")
 
     print("==================================================")
-    print(f"Publishing MAURICE Model Variant: '{variant}'")
+    print(f"Publishing maurice Model Variant: '{variant}'")
     print(f"Target HF Repository: {repo_id}")
     print(f"Merged Weights Path: {weights_path}")
     print(f"Quantized GGUF Path: {gguf_path}")
@@ -244,7 +244,7 @@ def publish_variant(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="MAURICE Hugging Face Hub Publisher")
+    parser = argparse.ArgumentParser(description="maurice Hugging Face Hub Publisher")
     parser.add_argument(
         "--repo-id",
         type=str,

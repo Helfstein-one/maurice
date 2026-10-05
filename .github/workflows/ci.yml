@@ -1,4 +1,4 @@
-name: MAURICE Sequential CI Pipeline
+name: maurice Sequential CI Pipeline
 
 on:
   push:

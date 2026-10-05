@@ -126,9 +126,9 @@ def format_variant_table(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 def render_app() -> None:
     """Renders the Streamlit multi-tab user interface."""
-    st.set_page_config(page_title="MAURICE LLM Suite & Benchmark Analysis", layout="wide")
+    st.set_page_config(page_title="maurice LLM Suite & Benchmark Analysis", layout="wide")
 
-    st.title("MAURICE LLM Suite")
+    st.title("maurice LLM Suite")
 
     tab1, tab2 = st.tabs(["💬 Chat & Reasoning", "📊 Benchmarks"])
 
@@ -178,7 +178,7 @@ def render_app() -> None:
         st.header("📊 Model Benchmark & Performance Analysis")
         st.markdown(
             "Analyze hardware throughput, Time to First Token (TTFT) latency, memory footprint, "
-            "and domain-specific evaluation scores across trained MAURICE variants (`mau-llm-1.0-r`, "
+            "and domain-specific evaluation scores across trained maurice variants (`mau-llm-1.0-r`, "
             "`mau-llm-1.0-c`, `mau-llm-1.0-g`)."
         )
 
